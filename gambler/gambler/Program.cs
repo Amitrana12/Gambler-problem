@@ -7,20 +7,20 @@ namespace gambler
         
         static void Main(string[] args)
         {
-            int cost = 100;
+            int totalCost = 100;
             int betCost = 1;
             Random random = new Random();
             int Check = random.Next(0, 2);
-            if (Check == 1)
+            if (Check == 1 && betCost==1)
             {
                 Console.WriteLine("you win");
-                cost++;
-                Console.WriteLine("you left cost "+cost);
+                totalCost++;
+                Console.WriteLine("you left cost "+totalCost);
             }
             else {
                 Console.WriteLine("you lose");
-                cost--;
-                Console.WriteLine("you left cost " + cost);
+                totalCost--;
+                Console.WriteLine("you left cost " + totalCost);
             }
 
         }
